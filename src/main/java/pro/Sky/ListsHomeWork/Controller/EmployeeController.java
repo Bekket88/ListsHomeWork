@@ -8,6 +8,7 @@ import pro.Sky.ListsHomeWork.Model.Employee;
 import pro.Sky.ListsHomeWork.Service.EmployeeService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping(path = "/employee")
@@ -26,8 +27,8 @@ public class EmployeeController {
     }
 
     @GetMapping(path = "/print")
-    public List<Employee> print() {
-        return employeeService.printList();
+    public Map<String, Employee> print() {
+        return employeeService.printMap();
     }
 
     @GetMapping(path = "/remove")
